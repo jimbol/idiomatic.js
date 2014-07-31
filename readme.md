@@ -22,7 +22,6 @@ Projects _must_ include unit tests.  We use [Jasmine](https://github.com/pivotal
  * [Beautiful Syntax](#spacing)
  * [Type Checking (Courtesy jQuery Core Style Guidelines)](#type)
  * [Conditional Evaluation](#cond)
- * [Practical Style](#practical)
  * [Naming](#naming)
  * [Misc](#misc)
  * [Native & Host Objects](#native)
@@ -243,7 +242,7 @@ Projects _must_ include unit tests.  We use [Jasmine](https://github.com/pivotal
 
     A. Actual Types
 
-    
+
     ```javascript
 
     String:
@@ -299,7 +298,6 @@ Projects _must_ include unit tests.  We use [Jasmine](https://github.com/pivotal
 
     ```javascript
 
-    // 4.1.1
     // When only evaluating that an array has length,
     // instead of this:
     if ( array.length > 0 ) ...
@@ -308,7 +306,6 @@ Projects _must_ include unit tests.  We use [Jasmine](https://github.com/pivotal
     if ( array.length ) ...
 
 
-    // 4.1.2
     // When only evaluating that an array is empty,
     // instead of this:
     if ( array.length === 0 ) ...
@@ -317,7 +314,6 @@ Projects _must_ include unit tests.  We use [Jasmine](https://github.com/pivotal
     if ( !array.length ) ...
 
 
-    // 4.1.3
     // When only evaluating that a string is not empty,
     // instead of this:
     if ( string !== "" ) ...
@@ -326,7 +322,6 @@ Projects _must_ include unit tests.  We use [Jasmine](https://github.com/pivotal
     if ( string ) ...
 
 
-    // 4.1.4
     // When only evaluating that a string _is_ empty,
     // instead of this:
     if ( string === "" ) ...
@@ -335,7 +330,6 @@ Projects _must_ include unit tests.  We use [Jasmine](https://github.com/pivotal
     if ( !string ) ...
 
 
-    // 4.1.5
     // When only evaluating that a reference is true,
     // instead of this:
     if ( foo === true ) ...
@@ -344,7 +338,6 @@ Projects _must_ include unit tests.  We use [Jasmine](https://github.com/pivotal
     if ( foo ) ...
 
 
-    // 4.1.6
     // When evaluating that a reference is false,
     // instead of this:
     if ( foo === false ) ...
@@ -357,7 +350,6 @@ Projects _must_ include unit tests.  We use [Jasmine](https://github.com/pivotal
     if ( foo === false ) ...
 
 
-    // 4.1.7
     // When only evaluating a ref that might be null or undefined, but NOT false, "" or 0,
     // instead of this:
     if ( foo === null || foo === undefined ) ...
@@ -372,121 +364,9 @@ Projects _must_ include unit tests.  We use [Jasmine](https://github.com/pivotal
     ```
     ALWAYS evaluate for the best, most accurate result - the above is a guideline, not a dogma.
 
-    ```javascript
-
-    // 4.2.1
-    // Type coercion and evaluation notes
-
-    // Prefer `===` over `==` (unless the case requires loose type evaluation)
-
-    // === does not coerce type, which means that:
-
-    "1" === 1;
-    // false
-
-    // == does coerce type, which means that:
-
-    "1" == 1;
-    // true
 
 
-    // 4.2.2
-    // Booleans, Truthies & Falsies
-
-    // Booleans:
-    true, false
-
-    // Truthy:
-    "foo", 1
-
-    // Falsy:
-    "", 0, null, undefined, NaN, void 0
-
-    ```
-
-
-5. <a name="practical">Practical Style</a>
-
-    ```javascript
-
-    // 5.1.1
-    // A Practical Module
-
-    (function( global ) {
-      var Module = (function() {
-
-        var data = "secret";
-
-        return {
-          // This is some boolean property
-          bool: true,
-          // Some string value
-          string: "a string",
-          // An array property
-          array: [ 1, 2, 3, 4 ],
-          // An object property
-          object: {
-            lang: "en-Us"
-          },
-          getData: function() {
-            // get the current value of `data`
-            return data;
-          },
-          setData: function( value ) {
-            // set the value of `data` and return it
-            return ( data = value );
-          }
-        };
-      })();
-
-      // Other things might happen here
-
-      // expose our module to the global object
-      global.Module = Module;
-
-    })( this );
-
-    ```
-
-    ```javascript
-
-    // 5.2.1
-    // A Practical Constructor
-
-    (function( global ) {
-
-      function Ctor( foo ) {
-
-        this.foo = foo;
-
-        return this;
-      }
-
-      Ctor.prototype.getFoo = function() {
-        return this.foo;
-      };
-
-      Ctor.prototype.setFoo = function( val ) {
-        return ( this.foo = val );
-      };
-
-
-      // To call constructor's without `new`, you might do this:
-      var ctor = function( foo ) {
-        return new Ctor( foo );
-      };
-
-
-      // expose our constructor to the global object
-      global.ctor = ctor;
-
-    })( this );
-
-    ```
-
-
-
-6. <a name="naming">Naming</a>
+5. <a name="naming">Naming</a>
 
 
 
@@ -496,7 +376,6 @@ Projects _must_ include unit tests.  We use [Jasmine](https://github.com/pivotal
 
     ```javascript
 
-    // 6.A.1.1
     // Example of code with poor names
 
     function q(s) {
@@ -512,7 +391,6 @@ Projects _must_ include unit tests.  We use [Jasmine](https://github.com/pivotal
 
     ```javascript
 
-    // 6.A.2.1
     // Example of code with improved names
 
     function query( selector ) {
@@ -534,37 +412,26 @@ Projects _must_ include unit tests.  We use [Jasmine](https://github.com/pivotal
 
     ```javascript
 
-    // 6.A.3.1
     // Naming strings
 
     `dog` is a string
 
 
-    // 6.A.3.2
     // Naming arrays
 
     `dogs` is an array of `dog` strings
 
 
-    // 6.A.3.3
     // Naming functions, objects, instances, etc
 
     camelCase; function and var declarations
 
 
-    // 6.A.3.4
     // Naming constructors, prototypes, etc.
 
     PascalCase; constructor function
 
 
-    // 6.A.3.5
-    // Naming regular expressions
-
-    rDesc = //;
-
-
-    // 6.A.3.6
     // From the Google Closure Library Style Guide
 
     functionNamesLikeThis;
@@ -582,7 +449,6 @@ Projects _must_ include unit tests.  We use [Jasmine](https://github.com/pivotal
 
     ```javascript
 
-    // 6.B.1
     function Device( opts ) {
 
       this.value = null;
@@ -616,25 +482,6 @@ Projects _must_ include unit tests.  We use [Jasmine](https://github.com/pivotal
 
 
     ```javascript
-    // 6.B.2
-
-    // eg. lodash/underscore, _.bind()
-    function Device( opts ) {
-
-      this.value = null;
-
-      stream.read( opts.path, _.bind(function( data ) {
-
-        this.value = data;
-
-      }, this) );
-
-      setInterval(_.bind(function() {
-
-        this.emit("event");
-
-      }, this), opts.freq || 100 );
-    }
 
     // eg. jQuery.proxy
     function Device( opts ) {
@@ -652,24 +499,6 @@ Projects _must_ include unit tests.  We use [Jasmine](https://github.com/pivotal
         this.emit("event");
 
       }, this), opts.freq || 100 );
-    }
-
-    // eg. dojo.hitch
-    function Device( opts ) {
-
-      this.value = null;
-
-      stream.read( opts.path, dojo.hitch( this, function( data ) {
-
-        this.value = data;
-
-      }) );
-
-      setInterval( dojo.hitch( this, function() {
-
-        this.emit("event");
-
-      }), opts.freq || 100 );
     }
 
     ```
