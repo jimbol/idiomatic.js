@@ -1,0 +1,863 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>/* Fonts */
+@font-face{
+  font-family: octicons-anchor;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+/* Body */
+html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+
+body{
+  color:#4d4d4c;
+  font-family:Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman',
+              "Hiragino Sans GB", "STXihei", "微软雅黑", serif;
+  font-size:12px;
+  line-height:1.5em;
+  background:#fefefe;
+  width: 45em;
+  margin: 10px auto;
+  padding: 30px;
+  border: 1px solid #ddd;
+  outline: 1300px solid #f8f8f8;
+}
+
+/* Links */
+a{ color: #06d; text-decoration:none; }
+a:hover{ color: #06e; text-decoration: underline; }
+a:active{ color:#faa700; }
+a:focus{ outline: thin dotted; }
+a:hover, a:active{ outline: 0; }
+
+::-moz-selection { background:rgba(255,255,0,0.3); color:#000 }
+::selection { background:rgba(255,255,0,0.3); color:#000 }
+
+a::-moz-selection { background:rgba(255,255,0,0.3); color:#0645ad }
+a::selection { background:rgba(255,255,0,0.3); color:#0645ad }
+
+/* Header Anchor Links*/
+.headeranchor-link {
+  color:#111;
+  border: 0;
+  margin-left: -20px;
+  padding-right: 6px;
+  cursor: pointer;
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.headeranchor {
+  font: normal normal 16px octicons-anchor;
+  line-height: 1;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.headeranchor-link:hover,
+.headeranchor-link:visited,
+.headeranchor-link:active
+{ text-decoration: none; color:#4d4d4c; }
+.headeranchor-link:hover .headeranchor:before,
+h1:hover .headeranchor:before,
+h2:hover .headeranchor:before,
+h3:hover .headeranchor:before,
+h4:hover .headeranchor:before,
+h5:hover .headeranchor:before,
+h6:hover .headeranchor:before
+{ content: '\f05c'; }
+
+abbr { cursor: pointer; }
+
+/* Paragraphs */
+p { margin:1em 0; }
+
+/* Images */
+img {
+  max-width:100%;
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+  vertical-align: middle;
+}
+
+/* Headers */
+h1,h2,h3,h4,h5,h6 {
+  font-weight:normal;
+  color:#111;
+  line-height: 1.7;
+  position: relative;
+}
+h4,h5,h6{ font-weight: bold; }
+h1 { font-size:2.5em; border-bottom: 1px solid #ddd;}
+h2 { font-size:2em; border-bottom:1px solid #eee; padding-bottom: 5px; }
+h3 { font-size:1.5em; }
+h4 { font-size:1.2em; }
+h5 { font-size:1em; }
+h6 { font-size:0.9em; }
+
+/* Block Quotes */
+blockquote {
+  color:#666666;
+  margin:0;
+  padding-left: 3em;
+  border-left: 0.5em #EEE solid;
+}
+hr { display: block; height: 2px; border: 0; border-top: 1px solid #aaa;border-bottom: 1px solid #eee; margin: 1em 0; padding: 0; }
+
+/* Raw Blocks */
+pre, code, kbd, samp {
+  color: #000;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  font-size: 0.88em;
+  background-color: #F8F8F8;
+  border: 1px solid #CCC;
+}
+
+pre {
+  padding: 10px;
+  overflow: auto;
+}
+
+code { padding: 0 3px 0 3px; }
+pre code { border: 0; padding: 0; }
+
+/* Admonition */
+.admonition {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  font-size: 0.88em;
+  padding: 0.5em 1em 0.5em 1em;
+  margin: 10px auto;
+}
+
+.admonition p {
+  padding: 0;
+  margin: 0.5em 0 0.5em 0;
+}
+
+.admonition-title {
+  font-weight: bold;
+}
+
+.admonition.attention {
+  color: #4F8A10;
+  background-color: #DFF2BF;
+  border: 1px solid #4F8A10;
+}
+
+.admonition.caution {
+  color: #9F6000;
+  background-color: #FEEFB3;
+  border: 1px solid #9F6000;
+}
+
+.admonition.hint {
+  color: #00529B;
+  background-color: #BDE5F8;
+  border: 1px solid #00529B;
+}
+
+.admonition.danger {
+  color: #D8000C;
+  background-color: #FFBABA;
+  border: 1px solid #D8000C;
+}
+
+.admonition.note {
+  color: #888888;
+  background-color: #F8F8F8;
+  border: 1px solid #888888;
+}
+
+/* Inlines */
+b, strong { font-weight: bold; }
+
+ins { background: #ff9; color: #000; text-decoration: none; }
+
+mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+dfn { font-style: italic; }
+
+/* Lists */
+ul, ol { padding-left: 30px; }
+li p:last-child { margin:0 }
+.task-list-item { list-style-type: none; }
+.task-list-item input { float:left; margin-left: -20px; margin-top: 6px; }
+dt { font-weight: bold; font-style: italic;}
+dd { margin: 0 0 0 2em; }
+
+/* Tables */
+table { width: 100%; border-collapse: collapse; overflow-x: auto; overflow-y: hidden; display: block;}
+table tr { background-color: #fefefe; }
+table tr:nth-child(2n) { background-color: #f8f8f8; }
+td, th { border: 1px solid #ddd; padding: 6px 13px; }
+
+/* Codehilite Tables */
+.codehilitetable { border: 0; border-spacing: 0; }
+.linenos, .code, .codehilitetable td { border: 0; padding: 0; }
+td:not(.linenos) .linenodiv { padding: 0 !important; }
+.code { width: 100%; }
+.linenos div pre, .linenodiv pre {
+  border: 0;
+  border-top: 1px solid #CCC;
+  border-left: 1px solid #CCC;
+  border-right: 1px solid #CCC;
+  border-bottom: 1px solid #CCC;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.code div pre {
+  border: 0;
+  border-top: 1px solid #CCC;
+  border-right: 1px solid #CCC;
+  border-bottom: 1px solid #CCC;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+/* Media */
+@media only screen and (min-width: 480px) {
+  body{ font-size:14px; }
+}
+
+@media only screen and (min-width: 768px) {
+  body{ font-size:16px; }
+}
+
+@media print {
+  * { background: transparent !important; color: black !important; filter:none !important; -ms-filter: none !important; }
+  body{ font-size:12pt; max-width:100%; outline:none; border: 0;}
+  a, a:visited { text-decoration: underline; }
+  .headeranchor-link { display: none; }
+  hr { height: 1px; border:0; border-bottom:1px solid black; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }
+  pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+  pre, blockquote { border: 1px solid #999; padding-right: 1em; page-break-inside: avoid; }
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3 { page-break-after: avoid; }
+}
+</style><title>readme</title></head><body><h1 id="team-style-guide"><a name="user-content-team-style-guide" href="#team-style-guide" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>Team Style Guide</h1>
+<p><em>This is based off of <a href="https://github.com/rwaldron/idiomatic.js">idiomatic.js</a> originally written by <a href="https://github.com/rwaldron">Rick Waldron</a>, but has been modified for my team&rsquo;s specific needs.  It will be updated as need be.</em></p>
+<h2 id="all-code-in-our-code-base-should-look-like-a-single-person-typed-it-no-matter-how-many-people-contributed"><a name="user-content-all-code-in-our-code-base-should-look-like-a-single-person-typed-it-no-matter-how-many-people-contributed" href="#all-code-in-our-code-base-should-look-like-a-single-person-typed-it-no-matter-how-many-people-contributed" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>All code in our code-base should look like a single person typed it, no matter how many people contributed.</h2>
+<p>As a team we agree to adhere to these guidelines when it is possible.  We understand that coding in a similar style makes reading code significantly easier.  In other words, we will strive to speak with same dialect, using the same idioms. </p>
+<p>This document is a statement of our project&rsquo;s commitment to code style consistency, readability and maintainability.</p>
+<h3 id="unit-tests"><a name="user-content-unit-tests" href="#unit-tests" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>Unit Tests</h3>
+<p>Projects <em>must</em> include unit tests.  We use <a href="https://github.com/pivotal/jasmine">Jasmine</a> and <a href="https://github.com/appendto/jquery-mockjax">MockJax</a> for out unit tests.  </p>
+<h2 id="table-of-contents"><a name="user-content-table-of-contents" href="#table-of-contents" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>Table of Contents</h2>
+<ul>
+<li><a href="#whitespace">Whitespace</a></li>
+<li><a href="#spacing">Beautiful Syntax</a></li>
+<li><a href="#type">Type Checking (Courtesy jQuery Core Style Guidelines)</a></li>
+<li><a href="#cond">Conditional Evaluation</a></li>
+<li><a href="#naming">Naming</a></li>
+<li><a href="#misc">Misc</a></li>
+<li><a href="#native">Native &amp; Host Objects</a></li>
+<li><a href="#comments">Comments</a></li>
+<li><a href="#language">One Language Code</a></li>
+</ul>
+<hr />
+<h2 id="the-style-guide"><a name="user-content-the-style-guide" href="#the-style-guide" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>The Style Guide</h2>
+<p><a name="whitespace">Whitespace</a></p>
+<ul>
+<li>Indent with <strong>spaces</strong>, not tabs</li>
+<li>Indents should be <strong>four spaces wide</strong></li>
+</ul>
+<p><a name="spacing">Beautiful Syntax</a></p>
+<p>A. Parens, Braces, Linebreaks</p>
+<p>```javascript</p>
+<p>// if/else/for/while/try always have spaces, braces and span multiple lines<br />
+  // this encourages readability</p>
+<p>// Examples of really cramped syntax</p>
+<p>if(condition) doSomething();</p>
+<p>while(condition) iterating++;</p>
+<p>for(var i=0;i&lt;100;i++) someIterativeFn();</p>
+<p>// Use whitespace to promote readability</p>
+<p>if ( condition ) {<br />
+    // statements<br />
+  }</p>
+<p>while ( condition ) {<br />
+    // statements<br />
+  }</p>
+<p>for ( var i = 0; i &lt; 100; i++ ) {<br />
+    // statements<br />
+  }</p>
+<p>// Even better:</p>
+<p>var i,<br />
+    length = 100;</p>
+<p>for ( i = 0; i &lt; length; i++ ) {<br />
+    // statements<br />
+  }</p>
+<p>// Or&hellip;</p>
+<p>var i = 0,<br />
+    length = 100;</p>
+<p>for ( ; i &lt; length; i++ ) {<br />
+    // statements<br />
+  }</p>
+<p>var prop;</p>
+<p>for ( prop in object ) {<br />
+    // statements<br />
+  }</p>
+<p>if ( true ) {<br />
+    // statements<br />
+  } else {<br />
+    // statements<br />
+  }<br />
+  ```</p>
+<pre><code>B. Assignments, Declarations, Functions ( Named, Expression, Constructor )
+
+```javascript
+
+// Variables
+var foo = &ldquo;bar&rdquo;,
+  num = 1,
+  undef;
+
+// Literal notations:
+var array = [],
+  object = {};
+
+
+// Using only one `var` per scope (function) promotes readability
+// and keeps your declaration list free of clutter (also saves a few keystrokes)
+
+// Bad
+var foo = &ldquo;&rdquo;;
+var bar = &ldquo;&rdquo;;
+var qux;
+
+// Good
+var foo = &ldquo;&rdquo;,
+  bar = &ldquo;&rdquo;,
+  qux;
+
+
+// var statements should always be in the beginning of their respective scope (function).
+
+
+// Bad
+function foo() {
+
+  // some statements here
+
+  var bar = &ldquo;&rdquo;,
+    qux;
+}
+
+// Good
+function foo() {
+  var bar = &ldquo;&rdquo;,
+    qux;
+
+  // all statements after the variables declarations.
+}
+```
+
+```javascript
+
+// Named Function Declaration
+function foo( arg1, argN ) {
+
+}
+
+// Usage
+foo( arg1, argN );
+
+
+// Named Function Declaration
+function square( number ) {
+  return number * number;
+}
+
+// Usage
+square( 10 );
+
+// Really contrived continuation passing style
+function square( number, callback ) {
+  callback( number * number );
+}
+
+square( 10, function( square ) {
+  // callback statements
+});
+
+
+// Function Expression
+var square = function( number ) {
+  // Return something valuable and relevant
+  return number * number;
+};
+
+// Function Expression with Identifier
+// This preferred form has the added value of being
+// able to call itself and have an identity in stack traces:
+var factorial = function factorial( number ) {
+  if ( number &lt; 2 ) {
+    return 1;
+  }
+
+  return number * factorial( number - 1 );
+};
+
+```
+
+
+C. Exceptions, Slight Deviations
+
+```javascript
+
+// Functions with callbacks
+foo(function() {
+  // Note there is no extra space between the first paren
+  // of the executing function call and the word &ldquo;function&rdquo;
+});
+
+// Function accepting an array, no space
+foo([ &ldquo;alpha&rdquo;, &ldquo;beta&rdquo; ]);
+
+// Function accepting an object, no space
+foo({
+  a: &ldquo;alpha&rdquo;,
+  b: &ldquo;beta&rdquo;
+});
+
+// Single argument string literal, no space
+foo(&ldquo;bar&rdquo;);
+
+// Inner grouping parens, no space
+if ( !(&ldquo;foo&rdquo; in obj) ) {
+
+}
+
+```
+
+D. Quotes
+
+**Always use single quotes.**</code></pre>
+<p><a name="type">Type Checking (Courtesy jQuery Core Style Guidelines)</a></p>
+<pre><code>Actual Types
+
+String:
+
+    typeof variable === &ldquo;string&rdquo;
+
+Number:
+
+    typeof variable === &ldquo;number&rdquo;
+
+Boolean:
+
+    typeof variable === &ldquo;boolean&rdquo;
+
+Object:
+
+    typeof variable === &ldquo;object&rdquo;
+
+Array:
+
+    Array.isArray( arrayLikeObject )
+    (wherever possible)
+
+null:
+
+    variable === null
+
+null or undefined:
+
+    variable == null
+
+undefined:
+
+  Global Variables:
+
+    typeof variable === &ldquo;undefined&rdquo;
+
+  Local Variables:
+
+    variable === undefined
+
+  Properties:
+
+    object.prop === undefined
+    object.hasOwnProperty( prop )
+    &ldquo;prop&rdquo; in object
+
+```</code></pre>
+<p><a name="cond">Conditional Evaluation</a></p>
+<pre><code>```javascript
+
+// When only evaluating that an array has length,
+// instead of this:
+if ( array.length &gt; 0 ) &hellip;
+
+// &hellip;evaluate truthiness, like this:
+if ( array.length ) &hellip;
+
+
+// When only evaluating that an array is empty,
+// instead of this:
+if ( array.length === 0 ) &hellip;
+
+// &hellip;evaluate truthiness, like this:
+if ( !array.length ) &hellip;
+
+
+// When only evaluating that a string is not empty,
+// instead of this:
+if ( string !== &ldquo;&rdquo; ) &hellip;
+
+// &hellip;evaluate truthiness, like this:
+if ( string ) &hellip;
+
+
+// When only evaluating that a string _is_ empty,
+// instead of this:
+if ( string === &ldquo;&rdquo; ) &hellip;
+
+// &hellip;evaluate falsy-ness, like this:
+if ( !string ) &hellip;
+
+
+// When only evaluating that a reference is true,
+// instead of this:
+if ( foo === true ) &hellip;
+
+// &hellip;evaluate like you mean it, take advantage of built in capabilities:
+if ( foo ) &hellip;
+
+
+// When evaluating that a reference is false,
+// instead of this:
+if ( foo === false ) &hellip;
+
+// &hellip;use negation to coerce a true evaluation
+if ( !foo ) &hellip;
+
+// &hellip;Be careful, this will also match: 0, &ldquo;&rdquo;, null, undefined, NaN
+// If you _MUST_ test for a boolean false, then use
+if ( foo === false ) &hellip;
+
+
+// 4.1.7
+// When only evaluating a ref that might be null or undefined, but NOT false, &ldquo;&rdquo; or 0,
+// instead of this:
+if ( foo === null || foo === undefined ) &hellip;
+
+// &hellip;take advantage of == type coercion, like this:
+if ( foo == null ) &hellip;
+
+// Remember, using == will match a `null` to BOTH `null` and `undefined`
+// but not `false`, &ldquo;&rdquo; or 0
+null == undefined
+
+```
+ALWAYS evaluate for the best, most accurate result - the above is a guideline, not a dogma.</code></pre>
+<ol>
+<li>
+<p><a name="naming">Naming</a></p>
+<p>A. You are not a human code compiler/compressor, so don&rsquo;t try to be one.</p>
+<p>The following code is an example of egregious naming:</p>
+<p>```javascript</p>
+<p>// 6.A.1.1<br />
+// Example of code with poor names</p>
+<p>function q(s) {<br />
+  return document.querySelectorAll(s);<br />
+}<br />
+var i,a=[],els=q(&ldquo;#foo&rdquo;);<br />
+for(i=0;i&lt;els.length;i++){a.push(els[i]);}<br />
+```</p>
+<p>Without a doubt, you&rsquo;ve written code like this - hopefully that ends today.</p>
+<p>Here&rsquo;s the same piece of logic, but with kinder, more thoughtful naming (and a readable structure):</p>
+<p>```javascript</p>
+<p>// 6.A.2.1<br />
+// Example of code with improved names</p>
+<p>function query( selector ) {<br />
+  return document.querySelectorAll( selector );<br />
+}</p>
+<p>var idx = 0,<br />
+  elements = [],<br />
+  matches = query(&ldquo;#foo&rdquo;),<br />
+  length = matches.length;</p>
+<p>for ( ; idx &lt; length; idx++ ) {<br />
+  elements.push( matches[ idx ] );<br />
+}</p>
+<p>```</p>
+<p>A few additional naming pointers:</p>
+<p>```javascript</p>
+<p>// 6.A.3.1<br />
+// Naming strings</p>
+<p><code>dog</code> is a string</p>
+<p>// 6.A.3.2<br />
+// Naming arrays</p>
+<p><code>dogs</code> is an array of <code>dog</code> strings</p>
+<p>// 6.A.3.3<br />
+// Naming functions, objects, instances, etc</p>
+<p>camelCase; function and var declarations</p>
+<p>// 6.A.3.4<br />
+// Naming constructors, prototypes, etc.</p>
+<p>PascalCase; constructor function</p>
+<p>// 6.A.3.5<br />
+// Naming regular expressions</p>
+<p>rDesc = //;</p>
+<p>// 6.A.3.6<br />
+// From the Google Closure Library Style Guide</p>
+<p>functionNamesLikeThis;<br />
+variableNamesLikeThis;<br />
+ConstructorNamesLikeThis;<br />
+EnumNamesLikeThis;<br />
+methodNamesLikeThis;<br />
+SYMBOLIC_CONSTANTS_LIKE_THIS;</p>
+<p>```</p>
+<p>B. Faces of <code>this</code></p>
+<p>Beyond the generally well known use cases of <code>call</code> and <code>apply</code>, always prefer <code>.bind( this )</code> or a functional equivalent, for creating <code>BoundFunction</code> definitions for later invocation. Only resort to aliasing when no preferable option is available.</p>
+<p>```javascript</p>
+<p>// 6.B.1<br />
+function Device( opts ) {</p>
+<p>this.value = null;</p>
+<p>// open an async stream,<br />
+  // this will be called continuously<br />
+  stream.read( opts.path, function( data ) {</p>
+<pre><code>// Update this instance&rsquo;s current value
+// with the most recent value from the
+// data stream
+this.value = data;</code></pre>
+<p>}.bind(this) );</p>
+<p>// Throttle the frequency of events emitted from<br />
+  // this Device instance<br />
+  setInterval(function() {</p>
+<pre><code>// Emit a throttled event
+this.emit(&ldquo;event&rdquo;);</code></pre>
+<p>}.bind(this), opts.freq || 100 );<br />
+}</p>
+<p>// Just pretend we&rsquo;ve inherited EventEmitter ;)</p>
+<p>```</p>
+<p>When unavailable, functional equivalents to <code>.bind</code> exist in many modern JavaScript libraries.</p>
+<p>```javascript<br />
+// 6.B.2</p>
+<p>// eg. lodash/underscore, _.bind()<br />
+function Device( opts ) {</p>
+<p>this.value = null;</p>
+<p>stream.read( opts.path, _.bind(function( data ) {</p>
+<pre><code>this.value = data;
+</code></pre>
+<p>}, this) );</p>
+<p>setInterval(_.bind(function() {</p>
+<pre><code>this.emit(&ldquo;event&rdquo;);</code></pre>
+<p>}, this), opts.freq || 100 );<br />
+}</p>
+<p>// eg. jQuery.proxy<br />
+function Device( opts ) {</p>
+<p>this.value = null;</p>
+<p>stream.read( opts.path, jQuery.proxy(function( data ) {</p>
+<pre><code>this.value = data;
+</code></pre>
+<p>}, this) );</p>
+<p>setInterval( jQuery.proxy(function() {</p>
+<pre><code>this.emit(&ldquo;event&rdquo;);</code></pre>
+<p>}, this), opts.freq || 100 );<br />
+}</p>
+<p>// eg. dojo.hitch<br />
+function Device( opts ) {</p>
+<p>this.value = null;</p>
+<p>stream.read( opts.path, dojo.hitch( this, function( data ) {</p>
+<pre><code>this.value = data;
+</code></pre>
+<p>}) );</p>
+<p>setInterval( dojo.hitch( this, function() {</p>
+<pre><code>this.emit(&ldquo;event&rdquo;);</code></pre>
+<p>}), opts.freq || 100 );<br />
+}</p>
+<p>```</p>
+<p>As a last resort, create an alias to <code>this</code> using <code>self</code> as an Identifier. This is extremely bug prone and should be avoided whenever possible.</p>
+<p>```javascript</p>
+<p>// 6.B.3</p>
+<p>function Device( opts ) {<br />
+  var self = this;</p>
+<p>this.value = null;</p>
+<p>stream.read( opts.path, function( data ) {</p>
+<pre><code>self.value = data;
+</code></pre>
+<p>});</p>
+<p>setInterval(function() {</p>
+<pre><code>self.emit(&ldquo;event&rdquo;);</code></pre>
+<p>}, opts.freq || 100 );<br />
+}</p>
+<p>```</p>
+<p>C. Use <code>thisArg</code></p>
+<p>Several prototype methods of ES 5.1 built-ins come with a special <code>thisArg</code> signature, which should be used whenever possible</p>
+<p>```javascript</p>
+<p>// 6.C.1</p>
+<p>var obj;</p>
+<p>obj = { f: &ldquo;foo&rdquo;, b: &ldquo;bar&rdquo;, q: &ldquo;qux&rdquo; };</p>
+<p>Object.keys( obj ).forEach(function( key ) {</p>
+<p>// |this| now refers to <code>obj</code></p>
+<p>console.log( this[ key ] );</p>
+<p>}, obj ); // &lt;&ndash; the last arg is <code>thisArg</code></p>
+<p>// Prints&hellip;</p>
+<p>// &ldquo;foo&rdquo;<br />
+// &ldquo;bar&rdquo;<br />
+// &ldquo;qux&rdquo;</p>
+<p>```</p>
+<p><code>thisArg</code> can be used with <code>Array.prototype.every</code>, <code>Array.prototype.forEach</code>, <code>Array.prototype.some</code>, <code>Array.prototype.map</code>, <code>Array.prototype.filter</code></p>
+</li>
+<li>
+<p><a name="misc">Misc</a></p>
+<p>This section will serve to illustrate ideas and concepts that should not be considered dogma, but instead exists to encourage questioning practices in an attempt to find better ways to do common JavaScript programming tasks.</p>
+<p>A. Using <code>switch</code> should be avoided, modern method tracing will blacklist functions with switch statements</p>
+<p>There seems to be drastic improvements to the execution of <code>switch</code> statements in latest releases of Firefox and Chrome.<br />
+<a href="http://jsperf.com/switch-vs-object-literal-vs-module">http://jsperf.com/switch-vs-object-literal-vs-module</a></p>
+<p>Notable improvements can be witnessed here as well:<br />
+<a href="https://github.com/rwldrn/idiomatic.js/issues/13">https://github.com/rwldrn/idiomatic.js/issues/13</a></p>
+<p>```javascript</p>
+<p>// 7.A.1.1<br />
+// An example switch statement</p>
+<p>switch( foo ) {<br />
+  case &ldquo;alpha&rdquo;:<br />
+    alpha();<br />
+    break;<br />
+  case &ldquo;beta&rdquo;:<br />
+    beta();<br />
+    break;<br />
+  default:<br />
+    // something to default to<br />
+    break;<br />
+}</p>
+<p>// 7.A.1.2<br />
+// A alternate approach that supports composability and reusability is to<br />
+// use an object to store &ldquo;cases&rdquo; and a function to delegate:</p>
+<p>var cases, delegator;</p>
+<p>// Example returns for illustration only.<br />
+cases = {<br />
+  alpha: function() {<br />
+    // statements<br />
+    // a return<br />
+    return [ &ldquo;Alpha&rdquo;, arguments.length ];<br />
+  },<br />
+  beta: function() {<br />
+    // statements<br />
+    // a return<br />
+    return [ &ldquo;Beta&rdquo;, arguments.length ];<br />
+  },<br />
+  _default: function() {<br />
+    // statements<br />
+    // a return<br />
+    return [ &ldquo;Default&rdquo;, arguments.length ];<br />
+  }<br />
+};</p>
+<p>delegator = function() {<br />
+  var args, key, delegate;</p>
+<p>// Transform arguments list into an array<br />
+  args = [].slice.call( arguments );</p>
+<p>// shift the case key from the arguments<br />
+  key = args.shift();</p>
+<p>// Assign the default case handler<br />
+  delegate = cases._default;</p>
+<p>// Derive the method to delegate operation to<br />
+  if ( cases.hasOwnProperty( key ) ) {<br />
+    delegate = cases[ key ];<br />
+  }</p>
+<p>// The scope arg could be set to something specific,<br />
+  // in this case, |null| will suffice<br />
+  return delegate.apply( null, args );<br />
+};</p>
+<p>// 7.A.1.3<br />
+// Put the API in 7.A.1.2 to work:</p>
+<p>delegator( &ldquo;alpha&rdquo;, 1, 2, 3, 4, 5 );<br />
+// [ &ldquo;Alpha&rdquo;, 5 ]</p>
+<p>// Of course, the <code>case</code> key argument could easily be based<br />
+// on some other arbitrary condition.</p>
+<p>var caseKey, someUserInput;</p>
+<p>// Possibly some kind of form input?<br />
+someUserInput = 9;</p>
+<p>if ( someUserInput &gt; 10 ) {<br />
+  caseKey = &ldquo;alpha&rdquo;;<br />
+} else {<br />
+  caseKey = &ldquo;beta&rdquo;;<br />
+}</p>
+<p>// or&hellip;</p>
+<p>caseKey = someUserInput &gt; 10 ? &ldquo;alpha&rdquo; : &ldquo;beta&rdquo;;</p>
+<p>// And then&hellip;</p>
+<p>delegator( caseKey, someUserInput );<br />
+// [ &ldquo;Beta&rdquo;, 1 ]</p>
+<p>// And of course&hellip;</p>
+<p>delegator();<br />
+// [ &ldquo;Default&rdquo;, 0 ]</p>
+<p>```</p>
+<p>B. Early returns promote code readability with negligible performance difference</p>
+<p>```javascript</p>
+<p>// 7.B.1.1<br />
+// Bad:<br />
+function returnLate( foo ) {<br />
+  var ret;</p>
+<p>if ( foo ) {<br />
+    ret = &ldquo;foo&rdquo;;<br />
+  } else {<br />
+    ret = &ldquo;quux&rdquo;;<br />
+  }<br />
+  return ret;<br />
+}</p>
+<p>// Good:</p>
+<p>function returnEarly( foo ) {</p>
+<p>if ( foo ) {<br />
+    return &ldquo;foo&rdquo;;<br />
+  }<br />
+  return &ldquo;quux&rdquo;;<br />
+}</p>
+<p>```</p>
+</li>
+<li>
+<p><a name="native">Native &amp; Host Objects</a></p>
+<p>The basic principle here is:</p>
+<h3 id="dont-do-stupid-shit-and-everything-will-be-ok"><a name="user-content-dont-do-stupid-shit-and-everything-will-be-ok" href="#dont-do-stupid-shit-and-everything-will-be-ok" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>Don&rsquo;t do stupid shit and everything will be ok.</h3>
+<p>To reinforce this concept, please watch the following presentation:</p>
+<h4 id="everything-is-permitted-extending-built-ins-by-andrew-dupont-jsconf2011-portland-oregon"><a name="user-content-everything-is-permitted-extending-built-ins-by-andrew-dupont-jsconf2011-portland-oregon" href="#everything-is-permitted-extending-built-ins-by-andrew-dupont-jsconf2011-portland-oregon" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>“Everything is Permitted: Extending Built-ins” by Andrew Dupont (JSConf2011, Portland, Oregon)</h4>
+<p><iframe src="http://blip.tv/play/g_Mngr6LegI.html" width="480" height="346" frameborder="0" allowfullscreen></iframe><embed type="application/x-shockwave-flash" src="http://a.blip.tv/api.swf#g_Mngr6LegI" style="display:none"></embed></p>
+<p><a href="http://blip.tv/jsconf/jsconf2011-andrew-dupont-everything-is-permitted-extending-built-ins-5211542">http://blip.tv/jsconf/jsconf2011-andrew-dupont-everything-is-permitted-extending-built-ins-5211542</a></p>
+</li>
+<li>
+<p><a name="comments">Comments</a></p>
+<h4 id="single-line-above-the-code-that-is-subject"><a name="user-content-single-line-above-the-code-that-is-subject" href="#single-line-above-the-code-that-is-subject" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>Single line above the code that is subject</h4>
+<h4 id="multiline-is-good"><a name="user-content-multiline-is-good" href="#multiline-is-good" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>Multiline is good</h4>
+<h4 id="end-of-line-comments-are-prohibited"><a name="user-content-end-of-line-comments-are-prohibited" href="#end-of-line-comments-are-prohibited" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>End of line comments are prohibited!</h4>
+<h4 id="jsdoc-style-is-good-but-requires-a-significant-time-investment"><a name="user-content-jsdoc-style-is-good-but-requires-a-significant-time-investment" href="#jsdoc-style-is-good-but-requires-a-significant-time-investment" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>JSDoc style is good, but requires a significant time investment</h4>
+</li>
+<li>
+<p><a name="language">One Language Code</a></p>
+<p>Programs should be written in one language, whatever that language may be, as dictated by the maintainer or maintainers.</p>
+</li>
+</ol>
+<h2 id="appendix"><a name="user-content-appendix" href="#appendix" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>Appendix</h2>
+<h3 id="comma-first"><a name="user-content-comma-first" href="#comma-first" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>Comma First.</h3>
+<p>Any project that cites this document as its base style guide will not accept comma first code formatting, unless explicitly specified otherwise by that project&rsquo;s author.</p>
+<hr />
+<p><a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/80x15.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Principles of Writing Consistent, Idiomatic JavaScript</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/rwldrn/idiomatic.js" property="cc:attributionName" rel="cc:attributionURL">Rick Waldron and Contributors</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.<br />Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/rwldrn/idiomatic.js" rel="dct:source">github.com/rwldrn/idiomatic.js</a>.</p></body></html>

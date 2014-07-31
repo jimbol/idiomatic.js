@@ -1,125 +1,20 @@
-# Principles of Writing Consistent, Idiomatic JavaScript
+# Team Style Guide
 
 
-## This is a living document and new ideas for improving the code around us are always welcome. Contribute: fork, clone, branch, commit, push, pull request.
+*This is based off of [idiomatic.js](https://github.com/rwaldron/idiomatic.js) originally written by [Rick Waldron](https://github.com/rwaldron), but has been modified for my team's specific needs.  It will be updated as need be.*
 
-* Rick Waldron [@rwaldron](http://twitter.com/rwaldron), [github](https://github.com/rwldrn)
-* Mathias Bynens [@mathias](http://twitter.com/mathias), [github](https://github.com/mathiasbynens)
-* Schalk Neethling [@ossreleasefeed](http://twitter.com/ossreleasefeed), [github](https://github.com/ossreleasefeed/)
-* Kit Cambridge  [@kitcambridge](http://twitter.com/kitcambridge), [github](https://github.com/kitcambridge)
-* Raynos  [github](https://github.com/Raynos)
-* Matias Arriola [@MatiasArriola](https://twitter.com/MatiasArriola), [github](https://github.com/MatiasArriola/)
-* John Fischer [@jfroffice](https://twitter.com/jfroffice), [github](https://github.com/jfroffice/)
-* Idan Gazit [@idangazit](http://twitter.com/idangazit), [github](https://github.com/idan)
-* Leo Balter [@leobalter](http://twitter.com/leobalter), [github](https://github.com/leobalter)
-* Breno Oliveira [@garu_rj](http://twitter.com/garu_rj), [github](https://github.com/garu)
-* Leo Beto Souza [@leobetosouza](http://twitter.com/leobetosouza), [github](https://github.com/leobetosouza)
-* Ryuichi Okumura [@okuryu](http://twitter.com/okuryu), [github](https://github.com/okuryu)
-* Pascal Precht [@PascalPrecht](http://twitter.com/PascalPrecht), [github](https://github.com/pascalprecht)
-* EngForDev [engfordev](http://www.opentutorials.org/course/167/1363) - Hwan Min Hong / MinTaek Kwon [@leoinsight](http://twitter.com/leoinsight) / Tw Shim [@marocchino](http://twitter.com/marocchino), [github](https://github.com/marocchino) / Nassol Kim [@nassol99](http://twitter.com/nassol99), [github](https://github.com/nassol) / Juntai Park [@rkJun](http://twitter.com/rkJun), [github](https://github.com/rkJun) / Minkyu Shim / Gangmin Won / Justin Yoo [@justinchronicle](http://twitter.com/justinchronicle) / Daeyup Lee
-* Marco Trulla [@marcotrulla](http://twitter.com/marcotrulla), [github](https://github.com/Ragnarokkr)
-* Alex Navasardyan [@alexnavasardyan](http://twitter.com/alexnavasardyan), [github](https://github.com/2k00l)
-* Mihai Paun [@mihaipaun](http://twitter.com/mihaipaun), [github](https://github.com/mihaipaun)
-* Evgeny Mandrikov [@\_godin\_](http://twitter.com/_godin_), [github](https://github.com/Godin)
-* Sofish Lin [@sofish](http://twitter.com/sofish), [github](https://github.com/sofish)
-* Дејан Димић [@dejan_dimic](http://twitter.com/dejan_dimic), [github](https://github.com/rubystream)
-* Miloš Gavrilović [@gavrisimo](http://twitter.com/gavrisimo), [github](https://github.com/gavrisimo)
-* Firede [@firede](https://twitter.com/firede) [github](https://github.com/firede)
-* monkadd [github](https://github.com/monkadd)
-* Stephan Lindauer [@stephanlindauer](http://twitter.com/stephanlindauer), [github](https://github.com/stephanlindauer)
-* Thomas P [@dragon5689](https://twitter.com/dragon5689) [github](https://github.com/dragon5689)
-* Yotam Ofek [@yotamofek](https://twitter.com/yotamofek) [github](https://github.com/yotamofek)
-* Aleksandr Filatov [@greybax](http://twitter.com/greybax), [github](https://github.com/greybax)
-* Duc Nguyen [@ducntq](https://twitter.com/ducntq), [github](https://github.com/ducntq)
-* James Young [@jamsyoung](http://twitter.com/jamsyoung), [github](https://github.com/jamsyoung)
+
+## All code in our code-base should look like a single person typed it, no matter how many people contributed.
+
+As a team we agree to adhere to these guidelines when it is possible.  We understand that coding in a similar style makes reading code significantly easier.  In other words, we will strive to speak with same dialect, using the same idioms. 
+
+This document is a statement of our project's commitment to code style consistency, readability and maintainability.
 
 
 
-## All code in any code-base should look like a single person typed it, no matter how many people contributed.
+### Unit Tests
 
-### The following list outlines the practices that I use in all code that I am the original author of; contributions to projects that I have created should follow these guidelines.
-
-### I do not intend to impose my style preferences on other people's code or projects; if an existing common style exists, it should be respected.
-
-
-> ### "Arguments over style are pointless. There should be a style guide, and you should follow it"
->_Rebecca_ _Murphey_
-
-&nbsp;
-
-> ### "Part of being a good steward to a successful project is realizing that writing code for yourself is a Bad Idea™. If thousands of people are using your code, then write your code for maximum clarity, not your personal preference of how to get clever within the spec."
->_Idan_ _Gazit_
-
-
-## Translations
-
-* [German](https://github.com/rwldrn/idiomatic.js/tree/master/translations/de_DE)
-* [French](https://github.com/rwldrn/idiomatic.js/tree/master/translations/fr_FR)
-* [Spanish](https://github.com/rwldrn/idiomatic.js/tree/master/translations/es_ES)
-* [Portuguese - Brazil](https://github.com/rwldrn/idiomatic.js/tree/master/translations/pt_BR)
-* [Korean](https://github.com/rwldrn/idiomatic.js/tree/master/translations/ko_KR)
-* [Japanese](https://github.com/rwldrn/idiomatic.js/tree/master/translations/ja_JP)
-* [Italian](https://github.com/rwldrn/idiomatic.js/tree/master/translations/it_IT)
-* [Russian](https://github.com/rwldrn/idiomatic.js/tree/master/translations/ru_RU)
-* [Romanian](https://github.com/rwldrn/idiomatic.js/tree/master/translations/ro_RO)
-* [简体中文](https://github.com/rwldrn/idiomatic.js/tree/master/translations/zh_CN)
-* [Serbian - cyrilic alphabet](https://github.com/rwldrn/idiomatic.js/tree/master/translations/ср_СР)
-* [Serbian - latin aplphabet](https://github.com/rwldrn/idiomatic.js/tree/master/translations/sr_SR)
-
-
-## Important, Non-Idiomatic Stuff:
-
-### Code Quality Tools, Resources & References
-
- * [JavaScript Plugin](http://docs.codehaus.org/display/SONAR/JavaScript+Plugin) for [Sonar](http://www.sonarsource.org/)
- * [Plato](https://github.com/es-analysis/plato)
- * [jsPerf](http://jsperf.com/)
- * [jsFiddle](http://jsfiddle.net/)
- * [jsbin](http://jsbin.com/)
- * [JavaScript Lint (JSL)](http://javascriptlint.com/)
- * [jshint](http://jshint.com/)
- * [jslint](http://jslint.org/)
- * [eslint](http://eslint.org/)
- * [jscs](https://www.npmjs.org/package/jscs)
- * [Editorconfig](http://editorconfig.org/)
-
-## Get Smart
-
-### [Annotated ECMAScript 5.1](http://es5.github.com/)
-### [EcmaScript Language Specification, 5.1 Edition](http://ecma-international.org/ecma-262/5.1/)
-
-The following should be considered 1) incomplete, and 2) *REQUIRED READING*. I don't always agree with the style written by the authors below, but one thing is certain: They are consistent. Furthermore, these are authorities on the language.
-
- * [Baseline For Front End Developers](http://rmurphey.com/blog/2012/04/12/a-baseline-for-front-end-developers/)
- * [Eloquent JavaScript](http://eloquentjavascript.net/)
- * [JavaScript, JavaScript](http://javascriptweblog.wordpress.com/)
- * [Adventures in JavaScript Development](http://rmurphey.com/)
- * [Perfection Kills](http://perfectionkills.com/)
- * [Douglas Crockford's Wrrrld Wide Web](http://www.crockford.com)
- * [JS Assessment](https://github.com/rmurphey/js-assessment)
-
-
-
-
-### Build & Deployment Process
-
-Projects should always attempt to include some generic means by which source can be linted, tested and compressed in preparation for production use. For this task, [grunt](https://github.com/gruntjs/grunt) by Ben Alman is second to none and has officially replaced the "kits/" directory of this repo.
-
-
-
-
-### Test Facility
-
-Projects _must_ include some form of unit, reference, implementation or functional testing. Use case demos DO NOT QUALIFY as "tests". The following is a list of test frameworks, none of which are endorsed more than the other.
-
- * [QUnit](http://github.com/jquery/qunit)
- * [Jasmine](https://github.com/pivotal/jasmine)
- * [Vows](https://github.com/cloudhead/vows)
- * [Mocha](https://github.com/visionmedia/mocha)
- * [Hiro](http://hirojs.com/)
- * [JsTestDriver](https://code.google.com/p/js-test-driver/)
- * [Buster.js](http://busterjs.org/)
- * [Sinon.js](http://sinonjs.org/)
+Projects _must_ include unit tests.  We use [Jasmine](https://github.com/pivotal/jasmine) and [MockJax](https://github.com/appendto/jquery-mockjax) for out unit tests.  
 
 ## Table of Contents
 
@@ -139,27 +34,13 @@ Projects _must_ include some form of unit, reference, implementation or function
 ------------------------------------------------
 
 
-## Preface
-
-The following sections outline a _reasonable_ style guide for modern JavaScript development and are not meant to be prescriptive. The most important take-away is the **law of code style consistency**. Whatever you choose as the style for your project should be considered law. Link to this document as a statement of your project's commitment to code style consistency, readability and maintainability.
-
-
-
-
-
-## Idiomatic Style Manifesto
+## The Style Guide
 
 
 1. <a name="whitespace">Whitespace</a>
-  - Never mix spaces and tabs.
-  - When beginning a project, before you write any code, choose between soft indents (spaces) or real tabs, consider this **law**.
-      - For readability, I always recommend setting your editor's indent size to two characters &mdash; this means two spaces or two spaces representing a real tab.
-  - If your editor supports it, always work with the "show invisibles" setting turned on. The benefits of this practice are:
-      - Enforced consistency
-      - Eliminating end of line whitespace
-      - Eliminating blank line whitespace
-      - Commits and diffs that are easier to read
-  - Use [Editorconfig](http://editorconfig.org/) when possible.  It supports most IDEs and handles most whitespace settings.
+
+  - Indent with **spaces**, not tabs
+  - Indents should be **four spaces wide**
 
 
 2. <a name="spacing">Beautiful Syntax</a>
@@ -171,7 +52,6 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
     // if/else/for/while/try always have spaces, braces and span multiple lines
     // this encourages readability
 
-    // 2.A.1.1
     // Examples of really cramped syntax
 
     if(condition) doSomething();
@@ -181,7 +61,6 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
     for(var i=0;i<100;i++) someIterativeFn();
 
 
-    // 2.A.1.1
     // Use whitespace to promote readability
 
     if ( condition ) {
@@ -233,7 +112,6 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
 
     ```javascript
 
-    // 2.B.1.1
     // Variables
     var foo = "bar",
       num = 1,
@@ -244,7 +122,6 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
       object = {};
 
 
-    // 2.B.1.2
     // Using only one `var` per scope (function) promotes readability
     // and keeps your declaration list free of clutter (also saves a few keystrokes)
 
@@ -258,13 +135,7 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
       bar = "",
       qux;
 
-    // or..
-    var // Comment on these
-    foo = "",
-    bar = "",
-    quux;
-
-    // 2.B.1.3
+    
     // var statements should always be in the beginning of their respective scope (function).
 
 
@@ -284,32 +155,10 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
 
       // all statements after the variables declarations.
     }
-
-    // 2.B.1.4
-    // const and let, from ECMAScript 6, should likewise be at the top of their scope (block).
-
-    // Bad
-    function foo() {
-      let foo,
-        bar;
-      if (condition) {
-        bar = "";
-        // statements
-      }
-    }
-    // Good
-    function foo() {
-      let foo;
-      if (condition) {
-        let bar = "";
-        // statements
-      }
-    }
     ```
 
     ```javascript
 
-    // 2.B.2.1
     // Named Function Declaration
     function foo( arg1, argN ) {
 
@@ -319,7 +168,6 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
     foo( arg1, argN );
 
 
-    // 2.B.2.2
     // Named Function Declaration
     function square( number ) {
       return number * number;
@@ -338,7 +186,6 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
     });
 
 
-    // 2.B.2.3
     // Function Expression
     var square = function( number ) {
       // Return something valuable and relevant
@@ -356,20 +203,6 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
       return number * factorial( number - 1 );
     };
 
-
-    // 2.B.2.4
-    // Constructor Declaration
-    function FooBar( options ) {
-
-      this.options = options;
-    }
-
-    // Usage
-    var fooBar = new FooBar({ a: "alpha" });
-
-    fooBar.options;
-    // { a: "alpha" }
-
     ```
 
 
@@ -377,7 +210,6 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
 
     ```javascript
 
-    // 2.C.1.1
     // Functions with callbacks
     foo(function() {
       // Note there is no extra space between the first paren
@@ -387,7 +219,6 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
     // Function accepting an array, no space
     foo([ "alpha", "beta" ]);
 
-    // 2.C.1.2
     // Function accepting an object, no space
     foo({
       a: "alpha",
@@ -404,46 +235,16 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
 
     ```
 
-    D. Consistency Always Wins
+    D. Quotes
 
-    In sections 2.A-2.C, the whitespace rules are set forth as a recommendation with a simpler, higher purpose: consistency.
-    It's important to note that formatting preferences, such as "inner whitespace" should be considered optional, but only one style should exist across the entire source of your project.
-
-    ```javascript
-
-    // 2.D.1.1
-
-    if (condition) {
-      // statements
-    }
-
-    while (condition) {
-      // statements
-    }
-
-    for (var i = 0; i < 100; i++) {
-      // statements
-    }
-
-    if (true) {
-      // statements
-    } else {
-      // statements
-    }
-
-    ```
-
-    E. Quotes
-
-    Whether you prefer single or double shouldn't matter, there is no difference in how JavaScript parses them. What **ABSOLUTELY MUST** be enforced is consistency. **Never mix quotes in the same project. Pick one style and stick with it.**
-
-    F. End of Lines and Empty Lines
-
-    Whitespace can ruin diffs and make changesets impossible to read. Consider incorporating a pre-commit hook that removes end-of-line whitespace and blanks spaces on empty lines automatically.
+    **Always use single quotes.**
 
 3. <a name="type">Type Checking (Courtesy jQuery Core Style Guidelines)</a>
 
     A. Actual Types
+
+    
+    ```javascript
 
     String:
 
@@ -465,10 +266,6 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
 
         Array.isArray( arrayLikeObject )
         (wherever possible)
-
-    Node:
-
-        elem.nodeType === 1
 
     null:
 
@@ -493,202 +290,6 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
         object.prop === undefined
         object.hasOwnProperty( prop )
         "prop" in object
-
-    B. Coerced Types
-
-    Consider the implications of the following...
-
-    Given this HTML:
-
-    ```html
-
-    <input type="text" id="foo-input" value="1">
-
-    ```
-
-
-    ```javascript
-
-    // 3.B.1.1
-
-    // `foo` has been declared with the value `0` and its type is `number`
-    var foo = 0;
-
-    // typeof foo;
-    // "number"
-    ...
-
-    // Somewhere later in your code, you need to update `foo`
-    // with a new value derived from an input element
-
-    foo = document.getElementById("foo-input").value;
-
-    // If you were to test `typeof foo` now, the result would be `string`
-    // This means that if you had logic that tested `foo` like:
-
-    if ( foo === 1 ) {
-
-      importantTask();
-
-    }
-
-    // `importantTask()` would never be evaluated, even though `foo` has a value of "1"
-
-
-    // 3.B.1.2
-
-    // You can preempt issues by using smart coercion with unary + or - operators:
-
-    foo = +document.getElementById("foo-input").value;
-    //    ^ unary + operator will convert its right side operand to a number
-
-    // typeof foo;
-    // "number"
-
-    if ( foo === 1 ) {
-
-      importantTask();
-
-    }
-
-    // `importantTask()` will be called
-    ```
-
-    Here are some common cases along with coercions:
-
-
-    ```javascript
-
-    // 3.B.2.1
-
-    var number = 1,
-      string = "1",
-      bool = false;
-
-    number;
-    // 1
-
-    number + "";
-    // "1"
-
-    string;
-    // "1"
-
-    +string;
-    // 1
-
-    +string++;
-    // 1
-
-    string;
-    // 2
-
-    bool;
-    // false
-
-    +bool;
-    // 0
-
-    bool + "";
-    // "false"
-    ```
-
-
-    ```javascript
-    // 3.B.2.2
-
-    var number = 1,
-      string = "1",
-      bool = true;
-
-    string === number;
-    // false
-
-    string === number + "";
-    // true
-
-    +string === number;
-    // true
-
-    bool === number;
-    // false
-
-    +bool === number;
-    // true
-
-    bool === string;
-    // false
-
-    bool === !!string;
-    // true
-    ```
-
-    ```javascript
-    // 3.B.2.3
-
-    var array = [ "a", "b", "c" ];
-
-    !!~array.indexOf("a");
-    // true
-
-    !!~array.indexOf("b");
-    // true
-
-    !!~array.indexOf("c");
-    // true
-
-    !!~array.indexOf("d");
-    // false
-
-    // Note that the above should be considered "unnecessarily clever"
-    // Prefer the obvious approach of comparing the returned value of
-    // indexOf, like:
-
-    if ( array.indexOf( "a" ) >= 0 ) {
-      // ...
-    }
-    ```
-
-    ```javascript
-    // 3.B.2.4
-
-
-    var num = 2.5;
-
-    parseInt( num, 10 );
-
-    // is the same as...
-
-    ~~num;
-
-    num >> 0;
-
-    num >>> 0;
-
-    // All result in 2
-
-
-    // Keep in mind however, that negative numbers will be treated differently...
-
-    var neg = -2.5;
-
-    parseInt( neg, 10 );
-
-    // is the same as...
-
-    ~~neg;
-
-    neg >> 0;
-
-    // All result in -2
-    // However...
-
-    neg >>> 0;
-
-    // Will result in 4294967294
-
-
-
 
     ```
 
