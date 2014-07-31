@@ -507,8 +507,6 @@ Projects _must_ include unit tests.  We use [Jasmine](https://github.com/pivotal
 
     ```javascript
 
-    // 6.B.3
-
     function Device( opts ) {
       var self = this;
 
@@ -535,8 +533,6 @@ Projects _must_ include unit tests.  We use [Jasmine](https://github.com/pivotal
     Several prototype methods of ES 5.1 built-ins come with a special `thisArg` signature, which should be used whenever possible
 
     ```javascript
-
-    // 6.C.1
 
     var obj;
 
@@ -574,7 +570,6 @@ Projects _must_ include unit tests.  We use [Jasmine](https://github.com/pivotal
 
     ```javascript
 
-    // 7.A.1.1
     // An example switch statement
 
     switch( foo ) {
@@ -589,7 +584,6 @@ Projects _must_ include unit tests.  We use [Jasmine](https://github.com/pivotal
         break;
     }
 
-    // 7.A.1.2
     // A alternate approach that supports composability and reusability is to
     // use an object to store "cases" and a function to delegate:
 
@@ -636,7 +630,6 @@ Projects _must_ include unit tests.  We use [Jasmine](https://github.com/pivotal
       return delegate.apply( null, args );
     };
 
-    // 7.A.1.3
     // Put the API in 7.A.1.2 to work:
 
     delegator( "alpha", 1, 2, 3, 4, 5 );
@@ -677,7 +670,6 @@ Projects _must_ include unit tests.  We use [Jasmine](https://github.com/pivotal
 
     ```javascript
 
-    // 7.B.1.1
     // Bad:
     function returnLate( foo ) {
       var ret;
@@ -720,22 +712,16 @@ Projects _must_ include unit tests.  We use [Jasmine](https://github.com/pivotal
 
 9. <a name="comments">Comments</a>
 
+  Attempt to self document whenever possible
+
     #### Single line above the code that is subject
     #### Multiline is good
     #### End of line comments are prohibited!
-    #### JSDoc style is good, but requires a significant time investment
 
 
 10. <a name="language">One Language Code</a>
 
     Programs should be written in one language, whatever that language may be, as dictated by the maintainer or maintainers.
-
-## Appendix
-
-### Comma First.
-
-Any project that cites this document as its base style guide will not accept comma first code formatting, unless explicitly specified otherwise by that project's author.
-
 
 
 ----------
